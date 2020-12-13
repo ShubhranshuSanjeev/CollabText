@@ -52,5 +52,10 @@ namespace CollabText.Editor
             cRDT.InsertCharacter(ch, line, idx);
 
         }
+
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

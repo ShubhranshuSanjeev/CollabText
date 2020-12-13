@@ -99,15 +99,15 @@ namespace CollabText.Editor
 
             if (line >= tLines && idx == 0)
                 return new List<Int64>();
-            else if (line == tLines - 1 && idx == tCharCount)
+            else if ((line == tLines - 1) && (idx == tCharCount))
                 return new List<Int64>();
-            else if (line < tLines - 1 && idx == tCharCount)
+            else if ((line < tLines - 1) && (idx == tCharCount))
             {
                 line += 1;
                 idx = 0;
             }
 
-            return this.editorEntries[line][idx+1].id;
+            return this.editorEntries[line][idx].id;
         }
         public void InsertCharacter(char ch, Int32 line, Int32 idx)
         {
@@ -165,27 +165,23 @@ namespace CollabText.Editor
                     Int64 newPos;
                     if (boundaryStrategyForDepth)
                     {
-                        Int64 addVal = rnd.NextLong(step) + 1;
+                        Int64 addVal = rnd.NextLong(1, step);
                         newPos = id1 + addVal; 
                     }
                     else
                     {
-                        Int64 subVal = rnd.NextLong(step) + 1;
+                        Int64 subVal = rnd.NextLong(1, step);
                         newPos = id2 - subVal;
                     }
                     newID.Add(newPos);
                 }
-                else if(interval == 1 )
-                {
-                    newID.Add(id1);
-                }
                 else
                 {
                     newID.Add(id1);
+                    //q.Clear();
                 }
                 depth += 1;
             }
-
             return newID;
         }
     }
