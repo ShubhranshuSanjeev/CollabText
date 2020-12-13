@@ -173,28 +173,11 @@ namespace CollabText.Editor
                         Int64 subVal = rnd.NextLong(step) + 1;
                         newPos = id2 - subVal;
                     }
-                    //if (interval < this._boundary)
-                    //    id1 += 1;
-                    //else
-                    //{
-                    //    if (boundaryStrategyForDepth)
-                    //    {
-                    //        id1 += 1;
-                    //        id2 += id1 + this._boundary;
-                    //    }
-                    //    else
-                    //    {
-                    //        id1 = id2 - this._boundary;
-                    //    }
-                    //}
-                    //id2 = Math.Min(id2, baseForDepth);
-                    //Int64 newPos = rnd.NextLong(id1, id2);
                     newID.Add(newPos);
                 }
                 else if(interval == 1 )
                 {
                     newID.Add(id1);
-                    //q.Clear();
                 }
                 else
                 {
