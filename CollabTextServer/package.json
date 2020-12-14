@@ -1,0 +1,9 @@
+{
+  "name": "collab-text-server",
+  "version": "0.0.0",
+  "description": "CollabTextServer",
+  "main": "server.js",
+  "author": {
+    "name": "shubhranshu"
+  }
+}
